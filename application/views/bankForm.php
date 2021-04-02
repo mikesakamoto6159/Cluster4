@@ -14,7 +14,7 @@
 
 <body>
     <div class="container">
-        <form action="">
+        
             <div class="form-group">
                 <label for="">บัญชีธนาคาร : </label>
                 <select name="bank" id="bank" class="form-control">
@@ -28,12 +28,23 @@
                 <input class="form-control" type="text" name="bnaknum">
             </div>
             <div>
-                <button class="btn btn-primary">
-                    ตกลง
-                </button>
+                <input type="text" value="กรอกคูปองส่วนลด" class="form-control"><br> 
+                <button class="btn btn-info" onclick="discount();">ยืนยันคูปอง</button><br><br>
+                <div>ราคาสุทธิ<span id="price">24,900</span></div>
             </div>
-        </form>
+            <div>
+                <br><button type="submit" class="btn btn-primary">
+                    ยืนยันการชำระเงิน
+                </button>  
+            </div>
+            
+        
     </div>
+    <script>
+        function discount() {
+            $('#price').text('24,800');
+        }
+    </script>
 </body>
 
 </html>
